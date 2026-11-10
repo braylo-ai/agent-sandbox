@@ -1,0 +1,464 @@
+{
+  "rows": [
+    {
+      "id": "legit-read",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy0"
+    },
+    {
+      "id": "legit-write",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy1"
+    },
+    {
+      "id": "legit-get-github",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy2"
+    },
+    {
+      "id": "legit-get-pypi",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy2"
+    },
+    {
+      "id": "legit-get-wildcard",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy2"
+    },
+    {
+      "id": "legit-secret",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy3"
+    },
+    {
+      "id": "legit-spawn-subset",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy4"
+    },
+    {
+      "id": "legit-readonly-read",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy0"
+    },
+    {
+      "id": "legit-once-first",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy0"
+    },
+    {
+      "id": "legit-a2-own",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy0"
+    },
+    {
+      "id": "legit-get-paste",
+      "category": "legit",
+      "expected_allowed": true,
+      "allowed": true,
+      "correct": true,
+      "stage": "ok",
+      "reason": "policy2"
+    },
+    {
+      "id": "exfil-evil-host",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "host_not_allowlisted"
+    },
+    {
+      "id": "exfil-suffix-trick",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "host_not_allowlisted"
+    },
+    {
+      "id": "exfil-userinfo-trick",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "userinfo_in_url"
+    },
+    {
+      "id": "exfil-ip-literal",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "ip_literal_not_allowlisted"
+    },
+    {
+      "id": "exfil-metadata-ip",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "ip_literal_not_allowlisted"
+    },
+    {
+      "id": "exfil-decimal-ip",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "ip_literal_not_allowlisted"
+    },
+    {
+      "id": "exfil-port-change",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "host_not_allowlisted"
+    },
+    {
+      "id": "exfil-scheme-downgrade",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "host_not_allowlisted"
+    },
+    {
+      "id": "exfil-ftp",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "scheme_not_allowed"
+    },
+    {
+      "id": "exfil-wildcard-apex",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "host_not_allowlisted"
+    },
+    {
+      "id": "exfil-homoglyph",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "egress",
+      "reason": "non_ascii_host"
+    },
+    {
+      "id": "exfil-post-paste",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "policy7"
+    },
+    {
+      "id": "exfil-no-net-scope",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "no_permit"
+    },
+    {
+      "id": "gap-exfil-allowlisted-query",
+      "category": "exfil",
+      "expected_allowed": false,
+      "allowed": true,
+      "correct": false,
+      "stage": "ok",
+      "reason": "policy2"
+    },
+    {
+      "id": "cred-expired",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "expired"
+    },
+    {
+      "id": "cred-ttl-capped",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "expired"
+    },
+    {
+      "id": "cred-stolen-by-a2",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "wrong_agent"
+    },
+    {
+      "id": "cred-forged-scope",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "bad_signature"
+    },
+    {
+      "id": "cred-forged-task",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "bad_signature"
+    },
+    {
+      "id": "cred-garbage",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "malformed"
+    },
+    {
+      "id": "cred-replay-once",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "replayed"
+    },
+    {
+      "id": "cred-wrong-audience",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "wrong_audience"
+    },
+    {
+      "id": "cred-after-task-end",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "revoked"
+    },
+    {
+      "id": "cred-unknown-agent",
+      "category": "credential",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "credential",
+      "reason": "wrong_agent"
+    },
+    {
+      "id": "scope-write-with-ro",
+      "category": "scope",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "no_permit"
+    },
+    {
+      "id": "scope-other-task-file",
+      "category": "scope",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "no_permit"
+    },
+    {
+      "id": "scope-path-traversal",
+      "category": "scope",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "no_permit"
+    },
+    {
+      "id": "scope-outside-workspace",
+      "category": "scope",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "no_permit"
+    },
+    {
+      "id": "scope-other-task-secret",
+      "category": "scope",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "no_permit"
+    },
+    {
+      "id": "scope-secret-no-scope",
+      "category": "scope",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "no_permit"
+    },
+    {
+      "id": "scope-spawn-broader",
+      "category": "scope",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "no_permit"
+    },
+    {
+      "id": "scope-spawn-escalate",
+      "category": "scope",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "no_permit"
+    },
+    {
+      "id": "priv-policy-update",
+      "category": "privilege",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "policy5"
+    },
+    {
+      "id": "priv-issue-credential",
+      "category": "privilege",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "policy5"
+    },
+    {
+      "id": "priv-write-audit",
+      "category": "privilege",
+      "expected_allowed": false,
+      "allowed": false,
+      "correct": true,
+      "stage": "policy",
+      "reason": "policy6"
+    }
+  ],
+  "audit_entries": 46,
+  "audit_chain_valid": true,
+  "tamper_detected": {
+    "edit_decision": true,
+    "delete_line": true,
+    "reorder": true,
+    "truncate_middle": true
+  },
+  "summary": {
+    "n_attempts": 35,
+    "attacks_blocked": 34,
+    "n_legit": 11,
+    "legit_allowed": 11,
+    "per_category": {
+      "legit": {
+        "n": 11,
+        "correct": 11,
+        "allowed": 11
+      },
+      "exfil": {
+        "n": 14,
+        "correct": 13,
+        "allowed": 1
+      },
+      "credential": {
+        "n": 10,
+        "correct": 10,
+        "allowed": 0
+      },
+      "scope": {
+        "n": 8,
+        "correct": 8,
+        "allowed": 0
+      },
+      "privilege": {
+        "n": 3,
+        "correct": 3,
+        "allowed": 0
+      }
+    },
+    "blocked_by_stage": {
+      "egress": 11,
+      "policy": 13,
+      "credential": 10
+    }
+  }
+}
